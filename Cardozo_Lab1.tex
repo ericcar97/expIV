@@ -1,0 +1,399 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[spanish]{babel}
+\usepackage[a4paper,bindingoffset=0.2in,%
+            left=.5in,right=.5in,top=1in,bottom=1in,%
+            footskip=.25in]{geometry}
+\pagestyle{myheadings}
+\usepackage{datetime}
+\newdate{date}{23}{08}{2021}
+\date{\displaydate{date}}
+\usepackage[tablename = Tabla]{caption}
+\usepackage[figurename = Figura]{caption}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{commath}
+\usepackage{amsmath}
+\usepackage[bottom]{footmisc}
+\DeclareMathOperator{\atan}{arctan}
+\author{Eric Cardozo}
+\title{Laboratorio 1: Sensores de luz, ley de Malus.}
+\usepackage{subfig}
+\usepackage{siunitx}
+\sisetup{separate-uncertainty=true}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{multirow}
+
+
+
+\begin{document}
+\markright{Cardozo Eric}
+
+\maketitle
+
+
+\subsection*{Introducción} 
+
+Los cristales tintados son producidos como resultado de la adición de pequeñas porciones de  
+óxidos metálicos a la composición de un cristal flotado. Estas porciones colorean el cristal  
+bronce, verde, azul o gris pero no afectan las propiedades básicas del cristal excepto por  
+cambios en la transmisión de energía de la radiación que atraviesa el cristal. El color resulta  
+homogéneo a lo largo del espesor de una lámina. La mayoría de los cristales flotados contienen  
+pequeñas cantidades de óxido de hierro lo cual produce un tinte verde usualmente solo  
+percibido cuando la lámina es observada desde su borde. El óxido de cobalto es usado para tinte  
+gris y oxido de selenio es usado para el tinte bronce. Para producir tinte azul es necesario  
+adicionar más oxido de cobalto a la composición de cristal flotado. Estos óxidos no producen  
+una significativa reflexión ni transmisión diferencial del color. Usualmente su principal  
+característica óptica es disminuir transmisión total de luz. 
+
+ \hspace{1cm}
+
+La luz es una radiación electromagnética transversal, es decir, la oscilación del campo electromagnético es perpendicular a su propagación. En general, fuentes luminosas convencionales, como el Sol, emiten luz con campos eléctricos en cualquier dirección a la dirección de propagación (pero siempre perpendicular a ésta). Pero por diferentes mecanismos físicos se puede filtrar una sola dirección de oscilación, en este estado la luz está polarizada.
+
+\hspace{1cm}
+
+Un filtro polarizador o polarizador es un material que transmite de forma selectiva una determinada dirección de oscilación del campo eléctrico de una onda electromagnética como la luz, bloqueando el resto de planos de polarizaci\'on.
+
+
+\hspace{1cm}
+
+ 
+
+En este laboratorio se midió la transmitancia de un conjunto de cristales tintados. Se analizo también la estabilidad de los instrumentos ópticos utilizados. Por otra parte, se comprobó la ley de Malus en filtros polarizadores.
+
+\hspace{2cm}  
+
+\subsection*{Objetivo}
+
+\begin{itemize} 
+
+\item Cuantificar la estabilidad de los sensores de luz y el laser 
+\item Determinar el coeficiente de transmisión de una serie de cristales tintados.
+\item Verificar la ley de malus
+  
+\end{itemize}
+
+\hspace{2cm}  
+
+\subsection*{Instrumentación}
+
+\begin{itemize}
+\item Datalogger pasco NS 8100184615 
+\item Sensor de intensidad NS 8100247515 
+\item Coniometro 
+\item Laser 
+\item Laminas tintadas 
+\item Nivel de burbuja y escuadra 
+\item Polarizadores 6 y B8
+\end{itemize}
+
+\subsection*{Metodología}
+
+\subsubsection*{Sensores de luz}
+
+\begin{itemize}
+
+\item Se monta el sensor de intensidad en el coniometro y el láser apuntando al sensor, verificando con el nivel de burbuja y la escuadra que todo este nivelado y correctamente alineado. Se verifica que la intensidad del láser que se mida con el sensor sea la máxima posible, para asegurar que el láser este apuntando correctamente al sensor. 
+
+\item Se mide la intensidad máxima del láser. Debido a que la lectura de la intensidad, varía más que la precisión indicada en el manual del instrumento de 1dB, por los pequeños movimientos del láser, se toma como medida al intervalo en el que la lectura varia. 
+
+\item Se coloca cada trozo de cristal tintado entre el láser y el sensor y se mide la intensidad de la luz transmitida. Como el error del instrumento es pequeño, se toma como medición al intervalo en el que la lectura varia al mover ligeramente el cristal de su posición. Es necesario comprobar que cada cristal se encuentre lo mas cerca del sensor posible, para que la l\'uz dispersada sea la m\'inima. 
+
+\item Se mide las intensidades para hasta 7 y 13 cristales en fila con el mismo método, el primer conjunto corresponde a las mediciones con una resolución de 26000 \si\lux y para una resolución de 260 \si\lux.
+
+\item Se realizan ajustes no lineales sobre los datos medidos.
+
+
+\end{itemize}
+
+\subsubsection*{Ley de malus}
+
+\begin{itemize}
+
+\item Se montan los instrumentos como en la parte anterior, a diferencia de un par de polarizadores entre el láser y el sensor en vez de los cristales tintados. 
+
+\item Se coloca el primer polarizador (no graduado), de forma tal que cuando el polarizador graduado este en 90 grados, haya un mínimo en la intensidad del láser medida. 
+
+\item Se mide la luminosidad del láser, para diferentes ángulos del polarizador (cada 5 grados), asignándole una incertidumbre igual a las variaciones en la medición debido a pequeños movimientos del polarizador. 
+
+\item Se realiza un ajuste no lineal sobre los datos medidos, para comprobar si se verifica la ley de malus.   
+
+\end{itemize} 
+
+
+\subsection*{Mediciones y resultados}
+
+\subsubsection*{Sensores de luz}
+
+Se midio la intensidad maxima del laser, obteniendose un valor de:
+ 
+$$ I_0 = \SI{8060(60)}{\si\lux} $$ 
+Se midió la intensidad del láser luego de transmitirse por cada cristal en la tabla \ref{tab1}, y se obtuvo  la transmitancia utilizando la ecuación 1. 
+
+\begin{equation}
+T = \frac{I}{I_{0}} \qquad s_T = \sqrt{\frac{I^{2} s_{I_0}^{2}}{I_{0}^{4}} + \frac{s_{I}^{2}}{I_{0}^{2}}}
+\end{equation}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{cccc}
+\toprule
+$I$ &  $s_I$ &     $T$ &    $s_T$ \\
+\midrule
+4180 &   50 &  0.52 &  0.01 \\
+4170 &   50 &  0.52 &  0.01 \\
+4200 &   50 &  0.52 &  0.01 \\
+4130 &   50 &  0.51 &  0.01 \\
+4130 &   50 &  0.51 &  0.01 \\
+4200 &   50 &  0.52 &  0.01 \\
+4000 &   50 &  0.50 &  0.01 \\
+4200 &   50 &  0.52 &  0.01 \\
+4080 &   50 &  0.51 &  0.01 \\
+3990 &   50 &  0.50 &  0.01 \\
+4120 &   50 &  0.51 &  0.01 \\
+4200 &   50 &  0.52 &  0.01 \\
+3990 &   50 &  0.50 &  0.01 \\
+4180 &   50 &  0.52 &  0.01 \\
+\bottomrule
+\end{tabular}
+\caption{Mediciones de intensidad y transmitancia de cada cristal.}
+\label{tab1}
+\end{table}
+
+Suponiendo que las mediciones se comportan como una distribución normal, se comparan los valores máximos y mínimos de $T$ obtenidos mediante una prueba Z utilizando el estadístico de prueba 
+
+$$ Z = \frac{T_{max} - T_{min}}{\sqrt{2 s^2}} \approx 1.41 $$  
+
+Para un nivel de significancia de $\alpha = 0.05$ la región de rechazo es $RR = \{ z \geq 1.96$ o $ z \leq 1.96 \}$, por lo que el estadístico de prueba cae fuera de la región de rechazo y se puede afirmar con un nivel de confianza del $95\%$ que las transmitancias de los cristales todas iguales. 
+
+\hspace{1cm}
+
+ 
+
+Luego, se midió la intensidad del láser al pasar por $1,..., 7$ cristales y $ 6,...,13 $, obteniéndose los valores de la tablas 2 y 3. Dado a que los cristales son todos iguales, es válida la aproximación de la ecuación 2:  
+
+\begin{equation}
+I = I_0 T^n
+\end{equation} 
+
+\begin{table}[H]
+\centering
+
+\begin{tabular}{cc}
+
+\begin{tabular}{ccc}
+\toprule
+$n$ &     $I$ &  $s_I$ \\
+\midrule
+0 &  8060 &   60 \\
+1 &  4180 &   50 \\
+2 &  2160 &   40 \\
+3 &  1150 &   20 \\
+4 &   600 &   20 \\
+5 &   307 &   10 \\
+6 &   160 &   10 \\
+7 &    77 &   10 \\
+\bottomrule
+\hspace{1cm}
+\end{tabular} &
+
+\begin{tabular}{ccc}
+\toprule
+$n$ &      $I$ &   $s_I$ \\
+\midrule
+0 &  165.0 &  10.0 \\
+1 &   84.0 &   5.0 \\
+2 &   43.0 &   5.0 \\
+3 &   21.5 &   1.0 \\
+4 &   12.5 &   0.5 \\
+5 &    5.5 &   0.5 \\
+6 &    3.3 &   0.1 \\
+7 &    1.4 &   0.1 \\
+\bottomrule
+\hspace{1cm}
+\end{tabular} \\
+
+Tabla 2: resolución de 26000 lux & Tabla 3: resolución de 260 lux \\
+
+\end{tabular}
+\end{table}
+
+En la tabla 3 se toma como intensidad máxima del láser a la intensidad del láser luego de atravesar la sexta placa. Esto se hace para no sobrepasar la intensidad maxima.  
+
+\hspace{1cm}
+
+Se realizar un ajuste del modelo de la ecuación 2 sobre los datos de las tablas 2 y 3, usando como parámetros libres a $I_0$ y $T$, obteniéndose los siguientes resultados:
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ccccc}
+\toprule 
+{} & {} & Valor medio & Desviación estándar & Error estándar  \\
+\midrule
+
+\multirow{2}{*}{Tabla 2} & $T$ & 0.521 & 0.002 & 0.03 \\ 
+ & $I_0  [\si\lux]$ & 8050 & 50 & 720\\
+
+\midrule
+
+\multirow{2}{*}{Tabla 3} & $T$ & 0.518 & 0.004 & 0.004 \\ 
+ & $I_0  [\si\lux]$ & 164 & 6 & 6 \\
+ 
+\bottomrule
+\end{tabular}
+
+\hspace{1cm}
+
+Tabla 4: Resultados de los ajustes. 
+\end{table}
+ 
+ 
+Con la desviación estándar y el error estándar dados respectivamente por:
+
+$$ \sigma_i = \sqrt{Cov(i,i)} \qquad s_i = \sqrt{Cov(i,i)\frac{\sum res^2}{\nu}}$$ 
+
+Con $Cov(i,i)$ el elemento $i$ de la diagonal de la matriz de covarianza, $\sum res^2$ la suma de los residuos al cuadrado, y $\nu$ los grados de libertad del ajuste.
+
+\begin{figure}[H]
+  \centering
+   \includegraphics[width=1\textwidth]{plot1.eps}
+\caption{Resolucion de $26000\si\lux$}
+  \label{fig:plot1}
+  
+  \includegraphics[width=1\textwidth]{plot2.eps}
+\caption{Resolucion de $260\si\lux$}
+  \label{fig:plot1}
+\end{figure}
+
+\subsubsection*{Ley de Malus}
+
+ 
+
+Se midieron los datos de intensidad en función del ángulo de polarizador en la tabla 5.  
+  
+\begin{table}[H]
+\centering
+\begin{tabular}{cc}
+\begin{tabular}{ccc}
+\toprule
+$\theta$ &        $I$ &   $s_I$ \\
+\midrule
+-90 &     0.13 &   0.1 \\
+-85 &    23.30 &   0.5 \\
+-80 &    81.00 &   1.0 \\
+-75 &   190.00 &   2.0 \\
+-70 &   339.00 &   5.0 \\
+-65 &   505.00 &   5.0 \\
+-60 &   680.00 &   5.0 \\
+-55 &   870.00 &  10.0 \\
+-50 &  1060.00 &  10.0 \\
+-45 &  1330.00 &  20.0 \\
+-40 &  1550.00 &  20.0 \\
+-35 &  1760.00 &  20.0 \\
+-30 &  1950.00 &  20.0 \\
+-25 &  2130.00 &  30.0 \\
+-20 &  2290.00 &  30.0 \\
+-15 &  2360.00 &  30.0 \\
+-10 &  2520.00 &  40.0 \\
+-5 &  2550.00 &  40.0 \\
+{} & {} & {}  \\
+\bottomrule
+ \end{tabular} &
+\begin{tabular}{ccc}
+\toprule
+$\theta$ &        $I$ &   $s_I$ \\
+\midrule
+ 0 &  2570.00 &  50.0 \\
+ 5 &  2530.00 &  50.0 \\
+10 &  2470.00 &  50.0 \\
+15 &  2370.00 &  40.0 \\
+20 &  2250.00 &  40.0 \\
+25 &  2090.00 &  30.0 \\
+30 &  1900.00 &  30.0 \\
+35 &  1680.00 &  30.0 \\
+40 &  1440.00 &  20.0 \\
+45 &  1230.00 &  20.0 \\
+50 &  1020.00 &  20.0 \\
+55 &   800.00 &  10.0 \\
+60 &   590.00 &  10.0 \\
+65 &   410.00 &   5.0 \\
+70 &   275.00 &   5.0 \\
+75 &   153.00 &   2.0 \\
+80 &    71.00 &   1.0 \\
+85 &    12.80 &   0.5 \\
+90 &     0.00 &   0.1 \\
+\bottomrule
+\end{tabular} \\
+\end{tabular}
+
+\hspace{1cm}
+
+
+Tabla 5: Intensidad en funci\'on del \'angulo
+\end{table}
+
+
+Se realiz\'o un ajuste de los datos de la tabla con el siguiente modelo:
+
+\begin{equation}
+I = I_0 \cos^2 \left[ \left (\theta + \theta_0 \right) \frac{\pi}{180 \si\degree} \right] 
+\end{equation}
+
+Usando $I_0$ y $\theta_0$ como parámetros libres. Se obtuvieron los siguientes res\'ultados. 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{cccc}
+\toprule
+{} & Valor medido & Desviaci\'on \'estandar & error \'estandar \\
+\midrule
+$I_0 [\si\lux] $ & 2550 & 10 & 100 \\
+$\theta_0$ & 0.64 \si\degree & 0.02\si\degree & 0.04\si\degree \\
+\bottomrule
+\end{tabular}
+
+\hspace{1cm}
+
+Tabla 6: Resultados del ajuste.
+
+\end{table}
+
+
+\begin{figure}[H]
+  \centering
+   \includegraphics[width = 1 \textwidth]{plot3.eps}
+\caption{Ajuste por ley de Malus}
+  \label{fig:plot3}
+\end{figure}
+
+\subsection*{Conclusiones}
+
+Se logro medir la transmitancia de una serie de cristales tintados en distintas resoluciones del sensor, comprobando primero que todos ellos tenían coeficientes de transmisión indistinguibles entre sí, obteniéndose: 
+
+\hspace{1cm}
+
+$ T = \SI{0.52(3)}{\si\lux}$ Para una resolución de 26000 \si\lux 
+
+$T = \SI{0.518(4)}{\si\lux}$ Para una resolución de 260 \si\lux 
+
+\hspace{1cm}
+
+Aunque ambos valores son indistinguibles, se puede afirmar que, para intensidades más altas, la medición es más imprecisa, habiéndose obtenido un error estándar de un orden de magnitud mayor en las mediciones para una resolución de 26000 \si\lux. 
+
+
+
+\hspace{1cm}
+
+Esto también se nota para pequeños movimientos del láser, a mayor iluminancia, mayor es la inestabilidad en la medición.  
+
+
+
+\hspace{1cm}
+ 
+
+Por otra parte, también se logró comprobar la ley de Malus realizando un ajuste lineal sobre los puntos medidos para distintos ángulos entre los polarizadores. Los residuos del ajuste muestran una dispersión aleatoria y la curva ajustada pasa por la mayoría de los intervalos de error de los puntos.  
+
+\end{document}
